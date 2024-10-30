@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
+import UsernameItem from './UsernameItem';
 
-function Sidebar () {
+function Sidebar ({onUserSelect}) {
 
     const noUsers = 20;
     const [users, setUsers] = useState([]);
@@ -25,7 +26,7 @@ function Sidebar () {
         <div>
             <ul>
                 {users.map(user => (
-                    <li key={user.id}>{user.firstName} {user.lastName}</li>
+                    <UsernameItem key={user.id} user={user} onClick={onUserSelect}/>
                 ))}
             </ul>
         </div>   
