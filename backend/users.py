@@ -107,14 +107,16 @@ _users = [
     ]
 
 def get_user_by_id(id):
-    for user in get_users():
+    for user in get_users(len(_users)):
         if id == user["id"]:
             return user
     return None
 
 
-def get_users():
-    return _users
+def get_users(limit=30):
+    if not limit:
+        limit = 30
+    return _users[:limit]
     
     
 def update_user(id, name=None, email=None):

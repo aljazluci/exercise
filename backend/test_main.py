@@ -11,6 +11,15 @@ def test_get_users():
     assert response.status_code == 200
     assert response.json() == users.get_users()
     
+def test_get_users_limit():
+    limit = 20
+    response = client.get(
+        "/users",
+        params={"limit":limit}
+    )
+    assert response.status_code == 200
+    assert len(response.json()) == limit
+    
 def test_update_user_wrong_id():
     response = client.put(
         "/users/123",

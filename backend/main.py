@@ -11,8 +11,8 @@ class User(BaseModel):
 app = FastAPI()
 
 @app.get("/users")
-def get_users():
-    return [*users.get_users()]
+def get_users(limit: int = 30):
+    return [*users.get_users(limit)]
 
 @app.put("/users/{id}")
 def update_user(id: int, user_data: User):
