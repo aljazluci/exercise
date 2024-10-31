@@ -106,20 +106,25 @@ _users = [
         }
     ]
 
+def get_user_by_id(id):
+    for user in get_users():
+        if id == user["id"]:
+            return user
+    return None
+
 
 def get_users():
     return _users
     
     
 def update_user(id, name=None, email=None):
-    for user in get_users():
-        if id == user["id"]:
-            if name:
-                user["name"] = name
-            if email:
-                user["email"] = email
-            return user
-    return None
+    user = get_user_by_id(id)
+    if not user:
+        return None
+    user["name"] = name
+    user["email"] = email
+    return user
+
 
 if __name__ == "__main__":
     print(len(_users))
