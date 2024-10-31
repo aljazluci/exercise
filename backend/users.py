@@ -26,3 +26,17 @@ def get_users():
             "email": "charlie@doe.com"
         }
     ]
+    
+    
+def update_user(id, name=None, email=None):
+    for user in get_users():
+        if id == str(user["id"]):
+            if name:
+                user["name"] = name
+            if email:
+                user["email"] = email
+            return user
+    return None
+
+if __name__ == "__main__":
+    print("Running users.py")
