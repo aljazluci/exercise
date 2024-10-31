@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import UsernameItem from './UsernameItem';
+import axios from 'axios';
 
 function Sidebar ({onUserSelect}) {
 
@@ -7,14 +8,13 @@ function Sidebar ({onUserSelect}) {
     const [users, setUsers] = useState([]);
 
     async function getUsers (limit) {
-        let baseUrl = 'https://dummyjson.com/users';
-        let options = limit ? `limit=${limit}` : '';
+        // Should be in .env file anyways
+        let baseUrl = 'http://localhost:8000/users';
         try {
-            const res = await fetch(`${baseUrl}?${options}`);
-            const data = await res.json();
-            setUsers(data.users);
+            const res = await axios.get(baseUrl, {params: {limit}});
+            setUsers(res.data);
         } catch (error) {
-            console.log("Get users sidebar error");
+            console.log(error, "Get users sidebar error");
         }
     }
 

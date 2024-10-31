@@ -1,9 +1,7 @@
-
-
 function UsernameItem({user, onClick}) {
     return(
         <li onClick={()=>onClick(user)}>
-            {user.username}
+            {user.name}
         </li>
     )
 }
