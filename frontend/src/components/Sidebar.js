@@ -9,7 +9,7 @@ function Sidebar ({onUserSelect}) {
 
     async function getUsers (limit) {
         // Should be in .env file anyways
-        let baseUrl = 'http://localhost:8000/users';
+        let baseUrl = 'http://127.0.0.1:8000/users';
         try {
             const res = await axios.get(baseUrl, {params: {limit}});
             setUsers(res.data);
