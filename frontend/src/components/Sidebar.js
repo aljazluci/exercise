@@ -24,7 +24,7 @@ function Sidebar ({onUserSelect}) {
 
     return (
         <div className='bg-color-dark min-w-60 min-h-screen'>
-            <ul className='flex flex-col justify-start p-8'>
+            <ul className='flex flex-col justify-start p-8 pt-0'>
                 {users.map(user => (
                     <UsernameItem key={user.id} user={user} onClick={onUserSelect}/>
                 ))}

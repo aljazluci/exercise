@@ -220,7 +220,7 @@ def update_user(id, user_data: User):
     }
     
     for fname, fval in fields.items():
-        if fval is not None:
+        if fval:
             user[fname] = fval
     
     return user

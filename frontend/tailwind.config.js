@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       colors: {
         "color-orange-on-dark": "var(--color-orange-on-dark)",
-        "color-dark": "var(--color-dark)"
+        "color-dark": "var(--color-dark)",
+        "color-orange-border": "var(--color-orange-border)",
+        "color-orange-submit": "var(--color-orange-submit)"
       }
     },
   },

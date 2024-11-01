@@ -11,11 +11,11 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col ">
-      <div className="header bg-color-dark h-16 p-12 content-center items-center">
+    <div className="flex flex-col max-h-screen">
+      <div className="header bg-color-dark h-16 p-12 content-center items-center border-b-white border-b fixed min-w-full">
         <img src={`${process.env.PUBLIC_URL}/header_logo.svg`} alt="Logo"/>
       </div>
-      <div className="flex flex-row flex-1">
+      <div className="flex flex-row flex-1 pt-24">
         <Sidebar onUserSelect={onUserSelect}/>
         <MainContent user={selectedUser}/>
       </div>
