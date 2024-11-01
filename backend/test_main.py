@@ -55,3 +55,16 @@ def test_update_user_with_body():
         )
     assert response.status_code == 200
     assert response.json() == new_user
+    
+def test_update_user_some_changes():
+    id = 16
+    new_user = users.get_user_by_id(id)
+    new_user["age"] = 17
+    new_user["email"] = "asdasd@gmail.com"
+    response = client.put(
+        "/users/" + str(id),
+        json={"age": 17, "email": "asdasd@gmail.com"}
+        )
+    assert response.status_code == 200
+    assert response.json() == new_user
+    

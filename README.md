@@ -1,5 +1,18 @@
 # Notes for solution
 
+To run: 
+
+In backend folder: 
+```
+fastapi dev main.py
+```
+In frontend folder:
+
+```
+npm start
+```
+
+
 I put the urls and paths directly into the code as a variable. Ideally they would be in a .env file, but since it's all local it doesn't really matter.
 
 In order to make it the same as connecting to *dummyjson*, I extended the database to 21 instances (just over 20 to display the *limit* functionality).
@@ -21,6 +34,7 @@ Gets a number of all users, limited by *limit* paramter, default 30
 PUT /users/{id}
 ```
 Updates user with *id*. Can change any number of properties or none at all. Empty values will be ignored. Id will not be changed
+
 
 <hr/>
 <hr/>

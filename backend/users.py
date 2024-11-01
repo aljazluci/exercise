@@ -193,7 +193,7 @@ _users = [
 from models import User
 
 def get_user_by_id(id):
-    for user in get_users(len(_users)):
+    for user in _users:
         if id == user["id"]:
             return user
     return None
