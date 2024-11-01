@@ -1,110 +1,196 @@
 _users = [
         {
             "id": 1,
-            "name": "John Doe",
-            "email": "john@doe.com"
+            "firstName": "John Doe",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "john@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 2,
-            "name": "Jane Doe",
-            "email": "jan@doe.com"
+            "firstName": "Jane Doe",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "jan@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 3,
-            "name": "Alice",
-            "email": "alice@doe.com"
+            "firstName": "Alice",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "alice@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 4,
-            "name": "Bob",
-            "email": "bob@doe.com"
+            "firstName": "Bob",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "bob@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 5,
-            "name": "Charlie",
-            "email": "charlie@doe.com"
+            "firstName": "Charlie",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "charlie@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 6,
-            "name": "Christopher Doe",
-            "email": "christopher@doe.com"
+            "firstName": "Lex",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "lex@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 7,
-            "name": "Dennis Doe",
-            "email": "dennis@doe.com"
+            "firstName": "Eve",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "eve@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 8,
-            "name": "Frank",
-            "email": "frank@doe.com"
+            "firstName": "Andrew",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "andrew@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 9,
-            "name": "Guillermo Doe",
-            "email": "guillermo@doe.com"
+            "firstName": "Robert",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "robert@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 10,
-            "name": "Kenny Doe",
-            "email": "kenny@doe.com"
+            "firstName": "Anniston",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "anniston@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 11,
-            "name": "Lis",
-            "email": "lis@doe.com"
+            "firstName": "Maria",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "maria@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 12,
-            "name": "Madeline",
-            "email": "madeline@doe.com"
+            "firstName": "Bob",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "bob@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 13,
-            "name": "Noah Doe",
-            "email": "noah@doe.com"
+            "firstName": "Steve",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "steve@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 14,
-            "name": "Paula Doe",
-            "email": "paula@doe.com"
+            "firstName": "Nandor",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "nandor@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 15,
-            "name": "Patrick Doe",
-            "email": "patrick@doe.com"
+            "firstName": "Jack",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "jack@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 16,
-            "name": "Rick",
-            "email": "rick@doe.com"
+            "firstName": "Jason",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "jason@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 17,
-            "name": "Samuel",
-            "email": "samuel@doe.com"
+            "firstName": "Bruce",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "bruce@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 18,
-            "name": "Tina Doe",
-            "email": "tina@doe.com"
+            "firstName": "Lana",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "lana@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 19,
-            "name": "Tilda Doe",
-            "email": "tilda@doe.com"
+            "firstName": "Wednesday",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "wednesday@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 20,
-            "name": "Uriela",
-            "email": "uriela@doe.com"
+            "firstName": "Boris",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "male",
+            "email": "boris@doe.com",
+            "phone": "123-456-7890",
         },
         {
             "id": 21,
-            "name": "V",
-            "email": "charlie@doe.com"
+            "firstName": "Molly",
+            "lastName": "Doe",
+            "age": 30,
+            "gender": "female",
+            "email": "molly@doe.com",
+            "phone": "123-456-7890",
         }
     ]
+
+from models import User
 
 def get_user_by_id(id):
     for user in get_users(len(_users)):
@@ -119,12 +205,24 @@ def get_users(limit=30):
     return _users[:limit]
     
     
-def update_user(id, name=None, email=None):
+def update_user(id, user_data: User):
     user = get_user_by_id(id)
     if not user:
         return None
-    user["name"] = name
-    user["email"] = email
+    
+    fields = {
+        "firstName": user_data.firstName,
+        "lastName": user_data.lastName,
+        "age": user_data.age,
+        "gender": user_data.gender,
+        "email": user_data.email,
+        "phone": user_data.phone
+    }
+    
+    for fname, fval in fields.items():
+        if fval is not None:
+            user[fname] = fval
+    
     return user
 
 
