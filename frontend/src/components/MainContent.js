@@ -1,12 +1,13 @@
+import { useState } from "react";
 import UpdateUserForm from "./UpdateUserForm";
-import UserDetails from "./UserDetails";
 
 function MainContent ({user}) {
-    /*return (
-        user ? <UserDetails user={user}/> : <></>
-    );*/
-    return(
-        <UpdateUserForm user={user}/>
+    const [response, setResponse] = useState("");
+
+    return(<>
+            user ? <UpdateUserForm user={user} onUserChange={setResponse}/> : <></>
+            Response: {JSON.stringify(response)}
+        </>
     )
 }
 

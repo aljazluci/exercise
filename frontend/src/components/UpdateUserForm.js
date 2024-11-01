@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
-function UpdateUserForm({user, updateUser}) {
-    console.log(user?.email)
+function UpdateUserForm({user, onUserChange/*, updateUser*/}) {
     const [firstName, setFirstName] = useState(user?.firstName || "");
     const [lastName, setLastName] = useState(user?.lastName || "");
     const [age, setAge] = useState(user?.age || "");
@@ -18,8 +18,34 @@ function UpdateUserForm({user, updateUser}) {
         setPhone(user?.phone || "");
     }, [user]);
 
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const formUser = {
+            id: user?.id,
+            firstName,
+            lastName,
+            age,
+            gender,
+            email,
+            phone
+        };
+        onUserSubmit(formUser);
+    }
+
+    async function onUserSubmit(formUser) {
+        let baseUrl = 'http://127.0.0.1:8000/users/' + formUser.id;
+        try {
+            const res = await axios.put(baseUrl, {
+                firstName, lastName, age, gender, email, phone
+            });  
+            onUserChange(res.data);
+        } catch (error) {
+            console.log(error, "Update users form error");
+        }
+    }
+
     return (
-        <form className="flex flex-col">
+        <form className="flex flex-col" onSubmit={handleSubmit}>
             <p>id {user?.id || ""}</p>
             <label> firstName
                 <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
@@ -39,6 +65,7 @@ function UpdateUserForm({user, updateUser}) {
             <label> phone
                 <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)}/>
             </label>
+            <input type="submit" value="Update user"/>
         </form>
     );
 }
