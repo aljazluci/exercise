@@ -1,3 +1,35 @@
+# Notes for solution
+
+I put the urls and paths directly into the code as a variable. Ideally they would be in a .env file, but since it's all local it doesn't really matter.
+
+In order to make it the same as connecting to *dummyjson*, I extended the database to 21 instances (just over 20 to display the *limit* functionality).
+
+## frontend
+I don't display the user details as well as the form, as the data is already displayed in the form (how I understood from the instructions).
+
+Form doesn't allow changing of the user's id as it doesn't make sense. The return shows the entire return from the server. 
+
+In accordance to the instructions, the actual data doesn't change, as it is the same in *dummyjson*, but it would be trivial to implement in the "backend" and with some extra work also in the frontend.
+
+## backend
+```
+GET /users
+```
+Gets a number of all users, limited by *limit* paramter, default 30
+
+```
+PUT /users/{id}
+```
+Updates user with *id*. Can change any number of properties or none at all. Empty values will be ignored. Id will not be changed
+
+<hr/>
+<hr/>
+
+## Original instructions
+
+
+
+
 Welcome to test assignment for Syyclops.
 
 This test is split into 2 sections, React and Python.

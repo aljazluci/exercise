@@ -37,20 +37,21 @@ def test_update_user_empty_body():
     assert response.json() == users.get_user_by_id(id)
     
 def test_update_user_with_body():
-    name = "Laszlo Cravensworth"
-    email = "laszlo@cravensworth.com"
-    id =2
+    id =16
     
-    new_user = users.get_user_by_id(id)
-    new_user["name"] = name
-    new_user["email"] = email
+    new_user = {
+            "id": id,
+            "firstName": "Jacky",
+            "lastName": "Dines",
+            "age": 30,
+            "gender": "other",
+            "email": "jason@dooooe.com",
+            "phone": "123-7890",
+        }
     
     response = client.put(
         "/users/" + str(id),
-        json={
-            "name": name,
-            "email": email
-        }
+        json=new_user
         )
     assert response.status_code == 200
     assert response.json() == new_user
