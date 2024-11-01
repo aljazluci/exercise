@@ -22,6 +22,7 @@ function Sidebar ({onUserSelect}) {
         getUsers(noUsers);
     }, []);
 
+    // Sidebar with displayed users
     return (
         <div className='bg-color-dark min-w-60 min-h-screen'>
             <ul className='flex flex-col justify-start p-8 pt-2'>

@@ -8,6 +8,8 @@ function MainContent ({user}) {
         setResponse("");    
     }, [user]);
 
+    // Form for changing users and response next to it
+    // dont display any response if there is no response yet
     return(user ? <div className="flex flex-row pt-8 px-16">
             <UpdateUserForm user={user} onUserChange={setResponse}/>
             {response && <div className="px-8 text-xs">

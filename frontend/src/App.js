@@ -11,7 +11,7 @@ function App() {
   }
 
   const contactButtonClassName="px-4 py-2 border w-32 justify-center align-center border-color-orange-border rounded-xl m-4 text-sm";
-
+  // Header and the bottom part
   return (
     <div className="flex flex-col max-h-screen ">
       <div className="text-white header bg-color-dark h-16 p-12 content-center items-center border-b-white border-b fixed min-w-full flex justify-between">

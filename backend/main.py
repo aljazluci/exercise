@@ -17,6 +17,7 @@ app.add_middleware(
 
 @app.get("/users")
 def get_users(limit: int = 30):
+    # Returns limit amount of users, or less if there are not enough in the "database"
     user_list = users.get_users(limit)
     if (not user_list) or (len(user_list) == 0):
         raise HTTPException(status_code=404, detail="No users retrieved")
@@ -24,6 +25,7 @@ def get_users(limit: int = 30):
 
 @app.put("/users/{id}")
 def update_user(id: int, user_data: User):
+    # updates user with given id, user_data can be incomplete, missing values are ignored
     user = users.update_user(id, user_data)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")

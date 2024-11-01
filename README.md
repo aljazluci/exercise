@@ -3,12 +3,12 @@
 To run: 
 
 In backend folder: 
-```
+```bash
 fastapi dev main.py
 ```
 In frontend folder:
 
-```
+```bash
 npm start
 ```
 
@@ -35,6 +35,10 @@ PUT /users/{id}
 ```
 Updates user with *id*. Can change any number of properties or none at all. Empty values will be ignored. Id will not be changed
 
+Run unit tests in backend folder with
+```bash 
+pytest
+```
 
 <hr/>
 <hr/>

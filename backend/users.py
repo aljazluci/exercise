@@ -220,6 +220,7 @@ def update_user(id, user_data: User):
     }
     
     for fname, fval in fields.items():
+        # if value is empty or None
         if fval:
             user[fname] = fval
     

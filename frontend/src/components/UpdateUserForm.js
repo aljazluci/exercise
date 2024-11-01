@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function UpdateUserForm({user, onUserChange}) {
+    // states
     const [firstName, setFirstName] = useState(user?.firstName || "");
     const [lastName, setLastName] = useState(user?.lastName || "");
     const [age, setAge] = useState(user?.age || "");
     const [gender, setGender] = useState(user?.gender || "");
     const [email, setEmail] = useState(user?.email || "");
     const [phone, setPhone] = useState(user?.phone || "");
+
+    // on user change 
     useEffect(() => {
         setFirstName(user?.firstName || "");
         setLastName(user?.lastName || "");
@@ -46,7 +49,7 @@ function UpdateUserForm({user, onUserChange}) {
 
     const inputTextClassName="block border-2 mt-2 p-2 py-1 rounded-xl";
     const labelClassName="mb-2";
-
+    // Form for updating user
     return (
         <form className="flex flex-col border-2 h-4/5 border-color-orange-border px-12 py-8 min-w-96 rounded-xl text-sm" onSubmit={handleSubmit}>
             <p className="mb-4">User ID: {user?.id || ""}</p>
