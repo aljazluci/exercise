@@ -1,7 +1,11 @@
 function UsernameItem({user, onClick}) {
     return(
-        <li onClick={()=>onClick(user)} className="text-white">
-            {user.firstName} {user.lastName}
+        <li className="text-white  ">
+            <p 
+                onClick={()=>onClick(user)} 
+                className="inline-block m-0 p-1 hover:text-color-orange-on-dark cursor-pointer">
+                    {user.firstName} {user.lastName}
+            </p>
         </li>
     )
 }

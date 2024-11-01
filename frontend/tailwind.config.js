@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "color-orange-on-dark": "var(--color-orange-on-dark)",
         "color-dark": "var(--color-dark)"
       }
     },
